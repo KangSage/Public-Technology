@@ -7,7 +7,7 @@
 값이 들어갈 자리는 '겹친 중괄호' {{property name}} 속에 프로퍼티명으로 지정한다.
 
 - 반복되는 리스트 등에 많이 사용한다.  
-자체적으로 if문{{#if}} for문{{#each}}, 핼퍼 함수 등을 지원하여 가공하기 쉽다.
+자체적으로 if문{{#if}}, for문{{#each}}, 핼퍼 함수 등을 지원하여 HTML을 가공하기 쉽다.
 
 ## 기본 사용법
 
@@ -71,8 +71,7 @@ console.log(html);
 ~~~
 /*
  * {{#'template 함수에 넣은 변수 안의 배열명'}}
- *  <div class="note {{'정의한 핼퍼 함수명' '함수에 넘겨줄 프로퍼티명1' '프로퍼티명2' '...'}}">
- *  </div>
+ *  <div class="note {{'정의한 핼퍼 함수명' '함수에 넘겨줄 프로퍼티명1' '프로퍼티명2' '...'}}"></div>
  * {{/'배열명'}}
  */
 
@@ -116,13 +115,12 @@ var data = {
 }
 
 var html = template(data);
-
 console.log(html);
 
 // 콘솔에 찍힌 HTML
-    <div class="note note-primary"></div>
-    <div class="note note-danger"></div>
-    <div class="note note-warning"></div>
+<div class="note note-primary"></div>
+<div class="note note-danger"></div>
+<div class="note note-warning"></div>
 ~~~
 
 
