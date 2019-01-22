@@ -7,7 +7,7 @@
 값이 들어갈 자리는 '겹친 중괄호' {{property name}} 속에 프로퍼티명으로 지정한다.
 
 - 반복되는 리스트 등에 많이 사용한다.  
-자체적으로 if문{{#if}}, for문{{#each}}, 핼퍼 함수 등을 지원하여 HTML을 가공하기 쉽다.
+자체적으로 if문 : {{#if}}, for문 : {{#each}}, 핼퍼 함수 등을 지원하여 HTML을 가공하기 쉽다.
 
 ## 기본 사용법
 
@@ -35,7 +35,7 @@ var source   = $('#entry-template').html();                         // jQuery �
 // source 변수에 담긴 템플릿을 컴파일한 함수를 template 변수에 담아서 사용하기 편하게 만든다.
 var template = Handlebars.compile(source);
 
-// {{var}} 자리에 값을 넣어 줄 객체를 만든다. 
+// {{property name}} 자리에 값을 넣어 줄 객체를 만든다. 
 var context = {
     title: 'My New Post',
     body: 'This is my first post!'
