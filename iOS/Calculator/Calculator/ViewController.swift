@@ -14,9 +14,10 @@ import UIKit // UIKit 모듈
 // Swift는 단일 상속 언어이다.
 class ViewController: UIViewController {
     
-    @IBOutlet weak var display: UILabel? // = nil
+    @IBOutlet weak var display: UILabel! // = nil
     
-    var userIsInTheMiddleOfTyping: Bool = false
+    // false는 무조건 Bool이므로 타입 추론
+    var userIsInTheMiddleOfTyping/* : Bool */ = false
     
     @IBAction func touchDigit(_ sender: UIButton) {
         // String? => Optional String
@@ -28,9 +29,13 @@ class ViewController: UIViewController {
         
         // !를 붙이면 asscociated value를 꺼내온다.
         let digit = sender.currentTitle!
-        let textCurrentlyInDisplay = display!.text!
-        display!.text = textCurrentlyInDisplay + digit
-        
+        if userIsInTheMiddleOfTyping {
+            let textCurrentlyInDisplay = display.text!
+            display.text = textCurrentlyInDisplay + digit
+        } else {
+            display.text = digit
+        }
+        userIsInTheMiddleOfTyping = true
     }
     
 }
