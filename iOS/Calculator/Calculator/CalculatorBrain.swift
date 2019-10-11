@@ -15,11 +15,16 @@ class CalculatorBrain {
         accumulator = operand
     }
     
+    var operations: Dictionary<String, Double> = [
+        "π" : Double.pi,
+        "e" : M_E,
+        "⎷" : sqrt,
+        "cos" : cos`
+    ]
+    
     func performOperation(symbol: String) {
-        switch symbol {
-        case "π": accumulator = Double.pi
-        case "⎷": accumulator = sqrt(accumulator)
-        default: break
+        if let contant = operations[symbol] {
+            accumulator = contant
         }
     }
     
