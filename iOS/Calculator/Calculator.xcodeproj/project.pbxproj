@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12D9D0D0234EF71D00973B43 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9D0CF234EF71D00973B43 /* CalculatorBrain.swift */; };
 		3DA7D886233B044800AF6A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA7D885233B044800AF6A3D /* AppDelegate.swift */; };
 		3DA7D888233B044800AF6A3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA7D887233B044800AF6A3D /* SceneDelegate.swift */; };
 		3DA7D88A233B044800AF6A3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA7D889233B044800AF6A3D /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12D9D0CF234EF71D00973B43 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		3DA7D882233B044800AF6A3D /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA7D885233B044800AF6A3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DA7D887233B044800AF6A3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				3DA7D899233B063500AF6A3D /* Supporting Files */,
 				3DA7D889233B044800AF6A3D /* ViewController.swift */,
 				3DA7D88B233B044800AF6A3D /* Main.storyboard */,
+				12D9D0CF234EF71D00973B43 /* CalculatorBrain.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				3DA7D88A233B044800AF6A3D /* ViewController.swift in Sources */,
 				3DA7D886233B044800AF6A3D /* AppDelegate.swift in Sources */,
+				12D9D0D0234EF71D00973B43 /* CalculatorBrain.swift in Sources */,
 				3DA7D888233B044800AF6A3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,12 +14,12 @@ import UIKit // UIKit 모듈
 // Swift는 단일 상속 언어이다.
 class ViewController: UIViewController {
     
-    @IBOutlet weak var display: UILabel! // = nil
+    @IBOutlet private weak var display: UILabel! // = nil
     
     // false는 무조건 Bool이므로 타입 추론
-    var userIsInTheMiddleOfTyping/* : Bool */ = false
+    private var userIsInTheMiddleOfTyping/* : Bool */ = false
     
-    @IBAction func touchDigit(_ sender: UIButton) {
+    @IBAction private func touchDigit(_ sender: UIButton) {
         // String? => Optional String
         // 타입은 Optional이고 Optional 타입은 두 가지의 값을 가질 수 있는데
         // nil(not set, 포인터도 0도 아닌 아무것도 set되지 않았다는 의미), 그리고 set(asscociated value)이다.
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     // computed propertie
-    var displayValue: Double {
+    private var displayValue: Double {
         get {
             return Double(display.text!)!
         }
@@ -48,15 +48,18 @@ class ViewController: UIViewController {
         }
     }
     
+    private var brain = CalculatorBrain()
+    
     @IBAction func performOperation(_ sender: UIButton) {
-        userIsInTheMiddleOfTyping = false
-       if let mathematicalSymbol = sender.currentTitle {
-            if mathematicalSymbol == "π" {
-                display.text = String(M_PI) // M_PI
-            } else if mathematicalSymbol == "⎷" {
-                displayValue = sqrt(displayValue)
-            }
+        if userIsInTheMiddleOfTyping {
+            brain.setOperand(operand: displayValue)
+            userIsInTheMiddleOfTyping = false
+        }
+       
+        if let mathematicalSymbol = sender.currentTitle {
+            brain.performOperation(symbol: mathematicalSymbol)
        }
+        displayValue = brain.result
     }
     
 }
